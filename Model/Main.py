@@ -228,6 +228,7 @@ if __name__ == '__main__':
     should_stop = False
 
     for epoch in range(args.epoch):
+        print(f"epoch number: {epoch}")
         t1 = time()
         loss, base_loss, kge_loss, reg_loss = 0., 0., 0., 0.
         n_batch = data_generator.n_train // args.batch_size + 1
@@ -237,7 +238,9 @@ if __name__ == '__main__':
         Alternative Training for KGAT:
         ... phase 1: to train the recommender.
         """
+        print(f"n_batch = {len(n_batch)}")
         for idx in range(n_batch):
+            print(f"record number: {idx}")
             btime= time()
 
             batch_data = data_generator.generate_train_batch()
@@ -265,7 +268,9 @@ if __name__ == '__main__':
 
             if args.use_kge is True:
                 # using KGE method (knowledge graph embedding).
+                print(f"n_A_batch len = {len(n_A_batch)}")
                 for idx in range(n_A_batch):
+                    print(f"record KGE number: {idx}")
                     btime = time()
 
                     A_batch_data = data_generator.generate_train_A_batch()
