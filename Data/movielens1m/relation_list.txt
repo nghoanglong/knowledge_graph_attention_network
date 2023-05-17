@@ -1,0 +1,11 @@
+org_id remap_id
+film.film.language 0
+film.film.country 1
+film.film.genre 2
+film.film.music 3
+film.film.directed_by 4
+film.film.written_by 5
+film.film.costume_design_by 6
+film.film.produced_by 7
+film.film.production_companies 8
+film.film.subjects 9

@@ -238,7 +238,7 @@ if __name__ == '__main__':
         Alternative Training for KGAT:
         ... phase 1: to train the recommender.
         """
-        print(f"n_batch = {len(n_batch)}")
+        print(f"n_batch = {n_batch}")
         for idx in range(n_batch):
             print(f"record number: {idx}")
             btime= time()
@@ -268,13 +268,9 @@ if __name__ == '__main__':
 
             if args.use_kge is True:
                 # using KGE method (knowledge graph embedding).
-                print(f"n_A_batch len = {len(n_A_batch)}")
+                print(f"n_A_batch len = {n_A_batch}")
                 for idx in range(n_A_batch):
-<<<<<<< HEAD
-                    print(f"record KGE number: {idx}")
-=======
                     print(f"record number trainning KGE: {idx}")
->>>>>>> aee8d39 (re data 1M)
                     btime = time()
 
                     A_batch_data = data_generator.generate_train_A_batch()
