@@ -270,7 +270,11 @@ if __name__ == '__main__':
                 # using KGE method (knowledge graph embedding).
                 print(f"n_A_batch len = {len(n_A_batch)}")
                 for idx in range(n_A_batch):
+<<<<<<< HEAD
                     print(f"record KGE number: {idx}")
+=======
+                    print(f"record number trainning KGE: {idx}")
+>>>>>>> aee8d39 (re data 1M)
                     btime = time()
 
                     A_batch_data = data_generator.generate_train_A_batch()
