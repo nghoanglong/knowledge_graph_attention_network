@@ -290,13 +290,13 @@ if __name__ == '__main__':
             print('ERROR: loss@phase2 is nan.')
             sys.exit()
 
-        show_step = 10
-        if (epoch + 1) % show_step != 0:
-            if args.verbose > 0 and epoch % args.verbose == 0:
-                perf_str = 'Epoch %d [%.1fs]: train==[%.5f=%.5f + %.5f + %.5f]' % (
-                    epoch, time() - t1, loss, base_loss, kge_loss, reg_loss)
-                print(perf_str)
-            continue
+        # show_step = 1
+        # if (epoch + 1) % show_step != 0:
+        if args.verbose > 0 and epoch % args.verbose == 0:
+            perf_str = 'Epoch %d [%.1fs]: train==[%.5f=%.5f + %.5f + %.5f]' % (
+                epoch, time() - t1, loss, base_loss, kge_loss, reg_loss)
+            print(perf_str)
+            # continue
 
         """
         *********************************************************
